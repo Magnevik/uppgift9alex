@@ -109,13 +109,13 @@ window.addEventListener(`load`, () => {
     let book = document.createElement(`div`);
     book.className = `id: ` + id;
     
-    let listTitle = document.createElement(`li`);
+    let listTitle = document.createElement(`div`);
     listTitle.innerText = `Title: `;
     
-    let listAuthor = document.createElement(`li`);
+    let listAuthor = document.createElement(`div`);
     listAuthor.innerText = `Author: `;
     
-    let listUpdated = document.createElement(`li`);
+    let listUpdated = document.createElement(`div`);
     listUpdated.innerText = 'Updated: ' + updated;
     
     let spanTitle = document.createElement(`span`);
@@ -198,9 +198,9 @@ window.addEventListener(`load`, () => {
         okButton.className = `ok-button`;
         okButton.innerText = `Ok!`;
 
-        listTitle.appendChild(okButton);
         listTitle.removeChild(spanTitle);
         listTitle.appendChild(changeTitleInput);
+        listTitle.appendChild(okButton);
 
         okButton.addEventListener(`click`, async() => {
             let newTitle = changeTitleInput.value;
@@ -254,9 +254,9 @@ window.addEventListener(`load`, () => {
         okButton.className = `ok-button`;
         okButton.innerText = `Ok!`;
 
-        listAuthor.appendChild(okButton);
         listAuthor.removeChild(spanAuthor);
         listAuthor.appendChild(changeAuthorInput);
+        listAuthor.appendChild(okButton);
 
         
         okButton.addEventListener(`click`, async() => {
