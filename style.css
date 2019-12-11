@@ -40,13 +40,14 @@
   
   .key-button{
     grid-column: 2/3;
-    background-color: grey; 
+    background-color: black; 
     border: none;
     color: white;
     padding: 15px 32px;
     font-size: 16px;
     height: 50px;
     width: 200px;
+    border-radius: 4px;
   }
   
   .key-box{
@@ -57,10 +58,11 @@
     grid-column: 3/4;
     margin: 0 15px 0 0;
     padding: 8px 0 0 0;
+    border-radius: 4px;
   }
   
   .saveKeyText{
-  color: darkred;
+  color: black;
   /*color:rgb(17, 17, 54);*/
   font-size: 1.5em;
   grid-column: 3/5;
@@ -71,6 +73,7 @@
   /*LOG IN BOX*/
   .page-grid{
     background-color: lightgrey;
+    opacity: 0.8;
     grid-column: 1/2;
     grid-row: 2/4;
     display: grid;
@@ -89,10 +92,11 @@
     font-size: 16px;
     grid-column: 1/2;
     grid-row: 1/2;
+    border-radius: 4px;
   }
   
   .login-button{
-    background-color:grey; 
+    background-color:black; 
     border: none;
     color: white;
     padding: 5px 32px;
@@ -102,11 +106,13 @@
     width: 200px;
     grid-column: 2/3;
     grid-row: 2/3;
+    border-radius: 4px;
   }
   
   /*ADD BOOKS CONTAINER*/
   .add-book-box{
     background-color: lightgrey;
+    opacity: 0.8;
     grid-column: 2/4;
     grid-row: 2/4;
     display: grid;
@@ -124,6 +130,7 @@
     font-size: 16px;
     grid-column: 1/2;
     grid-row: 1/2;
+    border-radius: 4px;
   }
   
   #author-input{
@@ -134,11 +141,11 @@
     width: 250px;
     text-align: center;
     font-size: 16px;
-  
+    border-radius: 4px;
   }
   
   .add-book{
-    background-color:grey; 
+    background-color:black; 
     border: none;
     color: white;
     padding: 5px 32px;
@@ -148,6 +155,7 @@
     width: 200px;  
     grid-column: 1/3;
     grid-row: 2/3;
+    border-radius: 4px;
   }
   
   
@@ -163,6 +171,7 @@
   
   .statusMsg p{
     position: relative; 
+    font-size: 1.5em;
     top: 15%;
     transform: trasnalteY(-15%);
   }
@@ -170,7 +179,7 @@
   .error-log{
     grid-column: 4/5;
     grid-row: 3/4;
-    background: lightgray;
+    background: white;
     padding: 20px 10px 10px 10px;
     text-align: center;
     font-size: 13px;
@@ -180,10 +189,10 @@
   
   
   .status-message .success {
-      color: green;
+      color: darkgreen;
   }
   .status-message .fail {
-      color: red;
+      color: darkred;
   }
   
   /*ADDED BOOKS*/
@@ -213,11 +222,19 @@
     text-align: left;
     font-size: 1.5em;
     list-style-type: none;
+    opacity: 0.8;
   }
   
   .button-div > button {
-    color: red;
+    position: relative;
+    top: 5px;
+    background-color: black;
+    color: white;
     margin: 0 10px 0 0;
+    font-size: 15px;
+    height: 30px;
+    width: 125px;
+    border-radius: 4px;
   }
 
 
@@ -310,8 +327,9 @@ grid-row: 3/4;
   
   /*ERROR LOG CONTAINER*/
   .statusMsg p{
-    top: 15%;
-    transform: trasnalteY(-15%);
+    font-size: 1em;
+    top: 20%;
+    transform: trasnalteY(-20%);
   }
   /*ADDED BOOKS*/
   .book-grid {
@@ -408,6 +426,8 @@ grid-row: 3/4;
     grid-column: 2/3;
     grid-row: 2/3;
   }
+
+
   
   .error-log{
     grid-column: 2/3;
