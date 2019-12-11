@@ -215,6 +215,13 @@
     list-style-type: none;
   }
   
+  .button-div > button {
+    color: red;
+    margin: 0 10px 0 0;
+  }
+
+
+
   
   @media only screen and (max-width: 868px) {
   /*GET YOUR KEY BOX*/

@@ -106,73 +106,58 @@ window.addEventListener(`load`, () => {
     };
 
     function createBook(title, author, id, updated=`This session`){
-    let book = document.createElement(`div`);
-    book.className = `id: ` + id;
-    
-    let listTitle = document.createElement(`li`);
-    listTitle.innerText = `Title: `;
-    
-    let listAuthor = document.createElement(`li`);
-    listAuthor.innerText = `Author: `;
-    
-    let listUpdated = document.createElement(`li`);
-    listUpdated.innerText = 'Updated: ' + updated;
-    
-    let spanTitle = document.createElement(`span`);
-    spanTitle.style.fontWeight="bold";
-    spanTitle.innerText = title;
-    listTitle.appendChild(spanTitle);
-    
-    let spanAuthor = document.createElement(`span`);
-    spanAuthor.style.fontWeight="bold";
-    spanAuthor.innerText = author;
-    listAuthor.appendChild(spanAuthor);
-    
-    let changeTitleButton = document.createElement(`button`);
-    changeTitleButton.innerText = `Change Title`;
-    changeTitleButton.className = `change-title`;
-        //STYLING
-        changeTitleButton.style.backgroundColor="grey";
-        changeTitleButton.style.color="white";
-        changeTitleButton.style.marginRight="13px";
-        changeTitleButton.style.height="30px";
-        changeTitleButton.style.width="95px";
-    
-    changeTitleButton.addEventListener(`click`, () => changeTitle(listTitle, spanTitle, listAuthor, spanAuthor, id));
-    
-    let changeAuthorButton = document.createElement(`button`);
-    changeAuthorButton.innerText = `Change Author`;
-    changeAuthorButton.className = `change-author`;
-        //STYLING
-        changeAuthorButton.style.backgroundColor="grey";
-        changeAuthorButton.style.color="white";
-        changeAuthorButton.style.marginRight="13px";
-        changeAuthorButton.style.height="30px";
-        changeAuthorButton.style.width="95px";
-    
-    changeAuthorButton.addEventListener(`click`, () => changeAuthor(listAuthor, spanAuthor, listTitle, spanTitle, id));
-    
-    let removeButton = document.createElement(`button`);
-    removeButton.className = (`remove-book`);
-        //STYLING
+        let book = document.createElement(`div`);
+        book.className = `id: ` + id;
+        
+        let listTitle = document.createElement(`div`);
+        listTitle.innerText = `Title: `;
+        
+        let listAuthor = document.createElement(`div`);
+        listAuthor.innerText = `Author: `;
+        
+        let listUpdated = document.createElement(`div`);
+        listUpdated.innerText = 'Updated: ' + updated;
+        
+        let spanTitle = document.createElement(`span`);
+        spanTitle.innerText = title;
+        listTitle.appendChild(spanTitle);
+        
+        let spanAuthor = document.createElement(`span`);
+        spanAuthor.innerText = author;
+        listAuthor.appendChild(spanAuthor);
+        
+        let buttonDiv = document.createElement(`div`);
+        buttonDiv.className = `button-div`;
+        
+        let changeTitleButton = document.createElement(`button`);
+        changeTitleButton.innerText = `Change Title`;
+        changeTitleButton.className = `change-title`;
+        
+        changeTitleButton.addEventListener(`click`, () => changeTitle(listTitle, spanTitle, listAuthor, spanAuthor, id));
+        
+        let changeAuthorButton = document.createElement(`button`);
+        changeAuthorButton.innerText = `Change Author`;
+        changeAuthorButton.className = `change-author`;
+        
+        changeAuthorButton.addEventListener(`click`, () => changeAuthor(listAuthor, spanAuthor, listTitle, spanTitle, id));
+        
+        let removeButton = document.createElement(`button`);
         removeButton.innerText = `Remove book`;
-        removeButton.style.backgroundColor="grey";
-        removeButton.style.color="white";
-        removeButton.style.height="30px";
-        removeButton.style.width="95px";
-    
-    removeButton.addEventListener(`click`, () => deleteBook(id, book));
-    
-    book.appendChild(listTitle);
-    book.appendChild(listAuthor);
-    book.appendChild(listUpdated);
-    
-    book.appendChild(changeTitleButton);
-    book.appendChild(changeAuthorButton);
-    book.appendChild(removeButton);
-    
-    bookGrid.appendChild(book);
-    }
+        removeButton.className = (`remove-book`);
+        
+        removeButton.addEventListener(`click`, () => deleteBook(id, book));
+        
+        buttonDiv.appendChild(changeTitleButton);
+        buttonDiv.appendChild(changeAuthorButton);
+        buttonDiv.appendChild(removeButton);
+
+        book.appendChild(listTitle);
+        book.appendChild(listAuthor);
+        book.appendChild(listUpdated);
+        book.appendChild(buttonDiv);
+        
+        bookGrid.appendChild(book);
+        }
 
 
     async function deleteBook(id, book){
