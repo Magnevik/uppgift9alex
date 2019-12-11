@@ -119,28 +119,47 @@ window.addEventListener(`load`, () => {
     listUpdated.innerText = 'Updated: ' + updated;
     
     let spanTitle = document.createElement(`span`);
+    spanTitle.style.fontWeight="bold";
     spanTitle.innerText = title;
     listTitle.appendChild(spanTitle);
     
     let spanAuthor = document.createElement(`span`);
+    spanAuthor.style.fontWeight="bold";
     spanAuthor.innerText = author;
     listAuthor.appendChild(spanAuthor);
     
     let changeTitleButton = document.createElement(`button`);
     changeTitleButton.innerText = `Change Title`;
     changeTitleButton.className = `change-title`;
+        //STYLING
+        changeTitleButton.style.backgroundColor="grey";
+        changeTitleButton.style.color="white";
+        changeTitleButton.style.marginRight="13px";
+        changeTitleButton.style.height="30px";
+        changeTitleButton.style.width="95px";
     
     changeTitleButton.addEventListener(`click`, () => changeTitle(listTitle, spanTitle, listAuthor, spanAuthor, id));
     
     let changeAuthorButton = document.createElement(`button`);
     changeAuthorButton.innerText = `Change Author`;
     changeAuthorButton.className = `change-author`;
+        //STYLING
+        changeAuthorButton.style.backgroundColor="grey";
+        changeAuthorButton.style.color="white";
+        changeAuthorButton.style.marginRight="13px";
+        changeAuthorButton.style.height="30px";
+        changeAuthorButton.style.width="95px";
     
     changeAuthorButton.addEventListener(`click`, () => changeAuthor(listAuthor, spanAuthor, listTitle, spanTitle, id));
     
     let removeButton = document.createElement(`button`);
-    removeButton.innerText = `Remove book`;
     removeButton.className = (`remove-book`);
+        //STYLING
+        removeButton.innerText = `Remove book`;
+        removeButton.style.backgroundColor="grey";
+        removeButton.style.color="white";
+        removeButton.style.height="30px";
+        removeButton.style.width="95px";
     
     removeButton.addEventListener(`click`, () => deleteBook(id, book));
     
