@@ -106,6 +106,7 @@ window.addEventListener(`load`, () => {
     };
 
     function createBook(title, author, id, updated=`This session`){
+
         let book = document.createElement(`div`);
         book.className = `id: ` + id;
         
@@ -202,9 +203,9 @@ window.addEventListener(`load`, () => {
         okButton.className = `ok-button`;
         okButton.innerText = `Ok!`;
 
-        listTitle.appendChild(okButton);
         listTitle.removeChild(spanTitle);
         listTitle.appendChild(changeTitleInput);
+        listTitle.appendChild(okButton);
 
         okButton.addEventListener(`click`, async() => {
             let newTitle = changeTitleInput.value;
@@ -258,9 +259,9 @@ window.addEventListener(`load`, () => {
         okButton.className = `ok-button`;
         okButton.innerText = `Ok!`;
 
-        listAuthor.appendChild(okButton);
         listAuthor.removeChild(spanAuthor);
         listAuthor.appendChild(changeAuthorInput);
+        listAuthor.appendChild(okButton);
 
         
         okButton.addEventListener(`click`, async() => {
