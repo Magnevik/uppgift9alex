@@ -156,10 +156,6 @@ window.addEventListener(`load`, () => {
     book.appendChild(listUpdated);
     book.appendChild(buttonDiv);
     
-    // book.appendChild(changeTitleButton);
-    // book.appendChild(changeAuthorButton);
-    // book.appendChild(removeButton);
-    
     bookGrid.appendChild(book);
     }
 
