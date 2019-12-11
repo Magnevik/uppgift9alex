@@ -126,6 +126,9 @@ window.addEventListener(`load`, () => {
     spanAuthor.innerText = author;
     listAuthor.appendChild(spanAuthor);
     
+    let buttonDiv = document.createElement(`div`);
+    buttonDiv.className = `button-div`;
+
     let changeTitleButton = document.createElement(`button`);
     changeTitleButton.innerText = `Change Title`;
     changeTitleButton.className = `change-title`;
@@ -144,13 +147,18 @@ window.addEventListener(`load`, () => {
     
     removeButton.addEventListener(`click`, () => deleteBook(id, book));
     
+    buttonDiv.appendChild(changeTitleButton);
+    buttonDiv.appendChild(changeAuthorButton);
+    buttonDiv.appendChild(removeButton);
+    
     book.appendChild(listTitle);
     book.appendChild(listAuthor);
     book.appendChild(listUpdated);
+    book.appendChild(buttonDiv);
     
-    book.appendChild(changeTitleButton);
-    book.appendChild(changeAuthorButton);
-    book.appendChild(removeButton);
+    // book.appendChild(changeTitleButton);
+    // book.appendChild(changeAuthorButton);
+    // book.appendChild(removeButton);
     
     bookGrid.appendChild(book);
     }
