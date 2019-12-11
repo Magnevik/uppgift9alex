@@ -10,29 +10,31 @@
     height: 100vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 200px 50px 200px 70px auto;
+    grid-template-rows: 250px 50px 150px 70px 150px;
     grid-gap: 10px;
   } 
   
   /*GET YOUR KEY BOX*/
   .page-banner{
     grid-column: 1/5;
-    background-color: lightgrey;
     grid-row: auto;
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr;
+    padding: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     align-content: center;
     text-align: center;
     background-image: url(books.jpg);
+    opacity: 0.8;
   }
   
   .title{
-    grid-column: 1/2;
-    position: relative;
-    left: 50px;
-    margin: 30px 0 0 50px;
+    grid-column: 1/3;
+    grid-row: 1/3;
+    font-size: 3em;
     color: white;
+    align-self: center;
   }
   
   
@@ -42,13 +44,9 @@
     border: none;
     color: white;
     padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
     font-size: 16px;
     height: 50px;
     width: 200px;
-    margin: 50px 0 0 10px;
-    opacity: 0.8;
   }
   
   .key-box{
@@ -59,15 +57,15 @@
     grid-column: 3/4;
     margin: 0 15px 0 0;
     padding: 8px 0 0 0;
-    font-family: Arial, Helvetica, sans-serif;
   }
   
   .saveKeyText{
   color: darkred;
-  font-size: 1em;
-  grid-column: 2/4;
+  /*color:rgb(17, 17, 54);*/
+  font-size: 1.5em;
+  grid-column: 3/5;
   align-items: center;
-  font-weight: strong;
+  font-weight: bold;
   }
   
   /*LOG IN BOX*/
@@ -76,7 +74,7 @@
     grid-column: 1/2;
     grid-row: 2/4;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     align-content: center;
@@ -99,8 +97,8 @@
     color: white;
     padding: 5px 32px;
     text-align: center;
-    font-size: 13px;
-    height: 30px;
+    font-size: 16px;
+    height: 50px;
     width: 200px;
     grid-column: 2/3;
     grid-row: 2/3;
@@ -112,7 +110,7 @@
     grid-column: 2/4;
     grid-row: 2/4;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr ;
    
@@ -121,7 +119,7 @@
   #title-input{
     background-color: white;
     height: 50px;
-    width: 200px;
+    width: 250px;
     text-align: center;
     font-size: 16px;
     grid-column: 1/2;
@@ -130,12 +128,13 @@
   
   #author-input{
     background-color: white;
-    height: 50px;
-    width: 200px;
-    text-align: center;
-    font-size: 16px;
     grid-column: 2/3;
     grid-row: 1/2;
+    height: 50px;
+    width: 250px;
+    text-align: center;
+    font-size: 16px;
+  
   }
   
   .add-book{
@@ -144,8 +143,8 @@
     color: white;
     padding: 5px 32px;
     text-align: center;
-    font-size: 13px;
-    height: 30px;
+    font-size: 16px;
+    height: 50px;
     width: 200px;  
     grid-column: 1/3;
     grid-row: 2/3;
@@ -157,14 +156,15 @@
     grid-column: 4/5;
     grid-row: 2/3;
     text-align: center;
-    background: white;
+    color: white;
+    background: rgb(17, 17, 54);
     /*border: 1px solid red;*/
   }
   
   .statusMsg p{
-    position: relative;
-    top: 35%;
-    transform: trasnalteY(-35%);
+    position: relative; 
+    top: 15%;
+    transform: trasnalteY(-15%);
   }
   
   .error-log{
@@ -191,7 +191,8 @@
     grid-column: 1/5;
     grid-row: 4/5;
     text-align: center;
-    background-color: lightgray;
+    background: rgb(17, 17, 54);
+    color: white;
   }
   
   .book-page-title h1{
@@ -205,7 +206,6 @@
     grid-row: 5/6;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
     margin: 3em auto;
     grid-gap: 1.5em;
     margin-top: 1em;
@@ -222,55 +222,83 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
   
-  @media only screen and (max-width: 868px) {
-  /*GET YOUR KEY BOX*/
+  @media only screen and (max-width: 1100px) {
+
+  .page-banner{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  
   .title{
-    left: 20px;
-    margin: 50px 0 0 0;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    font-size: 2.3em;
   }
   
   .key-button{
-    margin: 0 0 30px 0;
+    grid-column: 1/3;
+    grid-row: 2/3;
   }
   
   .key-box{
-    margin: 0 0 30px 0;
+    grid-column: 2/3;
+    grid-row: 2/3;
   }
   
   .saveKeyText{
-    margin: 0 0 50px 0;
+grid-column: 1/3;
+grid-row: 3/4;
+  font-size: 1.5em;
+  
+
   }
   
-  
     /*LOG IN BOX*/
+    .page-grid{
+        grid-gap: 10px;
+    }
+    
   .login-input{
-    width: 160px;
+    width: 130px;
   }
   
   .login-button{
-    width: 160px;
+    width: 110px;
+    height: 30px;
   }
   
   /*ADD BOOKS CONTAINER*/
   .add-book-box{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 0;
+    grid-gap: 10px;
   }
   
   #title-input{
     grid-column: 1/2;
     grid-row: 1/2;
-    width: 340px;
-    margin: 0 15px 0 0;
+    width: 250px;
+    margin-top: 30px;
   }
   
   #author-input{
     grid-column: 1/2;
     grid-row: 2/3;
-    width: 340px;
-    margin: 0 0 18px 15px;
+    width: 250px;
   }
   
   .add-book{
@@ -278,11 +306,9 @@
     width: 150px;  
     grid-column: 1/2;
     grid-row: 3/4;
-    margin: 0 0 0 15px;
   }
   
   /*ERROR LOG CONTAINER*/
-  
   .statusMsg p{
     top: 15%;
     transform: trasnalteY(-15%);
@@ -294,53 +320,39 @@
   }
    
   }
+
   
   @media only screen and (max-width: 600px) {
-  
   
     main{
       margin: 0;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 200px 50px 150px 120px 70px 100px auto;
+      grid-template-rows: 200px 50px 100px 130px 70px 100px auto;
     } 
     
     /*GET YOUR KEY BOX*/
   .page-banner{
     grid-column: 1/3;
     grid-row: 1/2;
-    grid-template-columns: 1fr 1fr;
   }
   
   .title{
-    grid-column: 1/3;
-    position: relative;
-    top: 30px;
-    left: 0;
     font-size: 1.7em;  
   }
   
   .key-button{
-    grid-column: 1/3;
     height: 40px;
     width: 170px;
-    padding: 0 0 2px 0;
-    margin-top: 10px;
+    padding: 0 0 4px 0;
   }
-  
+
   .key-box{
-    grid-column: 1/3;
     height: 40px;
     width: 170px;
-    margin-top: 50px;
-    padding: 5px 0 0 0;
-  
+    padding: 4px 0 0 0;
   }
-  
-  .saveKeyText{
-  grid-column: 1/3;
-  position: relative;
-  bottom: 20px;
-  }
+
+
   
   /*LOG IN BOX*/
   .page-grid{
@@ -362,7 +374,8 @@
   .add-book-box{
     grid-column: 1/3;
     grid-row: 4/5;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
   
   #title-input{
@@ -370,8 +383,7 @@
     width: 185px;
     grid-column: 1/2;
     grid-row: 1/2;
-    position: relative;
-    right: 100px;
+
   }
   
   #author-input{
@@ -379,17 +391,15 @@
     width: 185px;
     grid-column: 2/3;
     grid-row: 1/2;
-    position: relative; 
-    top: 15px;
-    right: 80px;
+
   }
   
   .add-book{
     height: 30px;
     width: 170px; 
-    position: relative;
-    bottom: 15px; 
-    left: 90px;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    margin-bottom: 50px;
   }
   
   
@@ -421,6 +431,7 @@
     grid-column: 1/3;
     grid-row: 6/7;
     grid-template-columns: 1fr;
+    /*grid-template-rows: 100px;*/
     margin-top: 1em;
     font-size: 1.2em;
     padding: 0 0 0 0;
