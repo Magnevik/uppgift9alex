@@ -1,290 +1,283 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  main{
-    margin: 10px 10px 0 10px;
-    height: 100vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 250px 50px 150px 70px 150px;
-    grid-gap: 10px;
-  } 
-  
-  /*GET YOUR KEY BOX*/
-  .page-banner{
-    grid-column: 1/5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
 
-    display: grid;
-    grid-gap: 10px;
-    padding: 50px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    background-color: darkslategray;
-    text-align: center;
-    /*background-image: url(books.jpg);*/
-    opacity: 0.8;
-  }
+main{
+  margin: 10px 10px 0 10px;
+  height: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 250px 50px 150px 70px 150px;
+  grid-gap: 10px;
+} 
+
+/*GET YOUR KEY BOX*/
+.page-banner{
+  grid-column: 1/5;
+
+  display: grid;
+  grid-gap: 10px;
+  padding: 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   
-  .title{
-    grid-column: 1/3;
-    grid-row: 1/3;
-    font-size: 3em;
-    color: white;
-    align-self: center;
-  }
-  
-  
-  .key-button{
-    grid-column: 2/3;
-    background-color: black; 
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    font-size: 16px;
-    height: 50px;
-    width: 200px;
-    border-radius: 4px;
-  }
-  
-  .key-box{
-    background-color: white;
-    height: 50px;
-    width: 200px;
-    font-size: 26px;
-    grid-column: 3/4;
-    margin: 0 15px 0 0;
-    padding: 8px 0 0 0;
-    border-radius: 4px;
-  }
-  
-  .saveKeyText{
-  color: red;
-  font-size: 1.5em;
-  /*color:rgb(17, 17, 54);*/
-  grid-column: 3/5;
-  align-items: center;
-  /*opacity: 0.8;
-  width: 370px;
-  height: 100px;
-  border-radius: 4px;*/
+  background-color: #1F3B2C;
   text-align: center;
-  
+  /*background-image: url(books.jpg);*/
+  opacity: 0.8;
+}
 
-  }
+.title{
+  grid-column: 1/3;
+  grid-row: 1/3;
+  font-size: 2.9em;
+  color: #9D8A76;
+  align-self: center;
+  font-family: 'Delius Swash Caps', cursive;
+}
 
-  .saveKeyText p{
-    position: relative; 
-    top: 20%;
-    transform: trasnalteY(-20%);
-    font-family: 'Bebas Neue', cursive;
-  }
+.key-button{
+  grid-column: 2/3;
+  background-color: #FDB900; 
+  border: none;
+  color: white;
+  font-size: 16px;
+  height: 40px;
+  width: 200px;
+  border-radius: 2px;
+}
 
-  
-  /*LOG IN BOX*/
-  .page-grid{
-    background-color: darkslategray;
-    border: 3px solid  darkslategray;
-    /*border: 5px solid  rgb(17, 17, 54);*/
-    opacity: 0.8;
-    grid-column: 1/2;
-    grid-row: 2/4;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    align-content: center;
-    text-align: center;
-    /*background-image: url(text.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 300px 300px;*/
-  }
-  
-  .login-input{
-    background-color: white;
-    height: 50px;
-    width: 200px;
-    text-align: center;
-    font-size: 16px;
-    grid-column: 1/2;
-    grid-row: 1/2;
-    border-radius: 4px;
-    border: none;
-  }
-  
-  .login-button{
-    background-color:black; 
-    border: none;
-    color: white;
-    padding: 5px 32px;
-    text-align: center;
-    font-size: 16px;
-    height: 50px;
-    width: 200px;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    border-radius: 4px;
-  }
-  
-  /*ADD BOOKS CONTAINER*/
-  .add-book-box{
-    background-color: white;
+.key-box{
+  background-color: white;
+  height: 40px;
+  width: 200px;
+  font-size: 26px;
+  grid-column: 3/4;
+  padding: 4px 0 0 0;
+  border-radius: 2px;
+}
 
-    opacity: 0.8;
-    grid-column: 2/4;
-    grid-row: 2/4;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr ;
+.saveKeyText{
+color: red;
+font-size: 20px;
+grid-column: 3/5;
+}
 
-  }
-  
-  #title-input{
-    background-color: white;
-    height: 50px;
-    width: 250px;
-    text-align: center;
-    font-size: 16px;
-    grid-column: 1/2;
-    grid-row: 1/2;
-    border-radius: 4px;
-    border: 2px solid darkslategray
-  }
-  
-  #author-input{
-    background-color: white;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    height: 50px;
-    width: 250px;
-    text-align: center;
-    font-size: 16px;
-    border-radius: 4px;
-    border: 2px solid darkslategray
-  }
-  
-  .add-book{
-    background-color:black;
-    border: none;
-    color: white;
-    padding: 5px 32px;
-    text-align: center;
-    font-size: 16px;
-    height: 50px;
-    width: 200px;  
-    grid-column: 1/3;
-    grid-row: 2/3;
-    border-radius: 4px;
-  }
-  
-  
-  /*ERROR LOG CONTAINER*/
-  .statusMsg{
-    grid-column: 4/5;
-    grid-row: 2/3;
-    text-align: center;
-    color: white;
-    background-color: darkslategray;
-    opacity: 0.8;
-    
-  }
-  
-  .statusMsg p{
-    position: relative; 
-    font-size: 1.1em;
-    top: 25%;
-    transform: trasnalteY(-25%);
-  }
-  
-  .error-log{
-    grid-column: 4/5;
-    grid-row: 3/4;
-    background: white;
-    padding: 20px 10px 10px 10px;
-    text-align: center;
-    font-size: 13px;
-    overflow: auto;
-    list-style-type: none;
-  }
-  
-  
-  .status-message .success {
-      color: darkgreen;
-  }
-  .status-message .fail {
-      color: red;
-  }
-  
-  /*ADDED BOOKS*/
-  .book-page-title{
-    grid-column: 1/5;
-    grid-row: 4/5;
-    text-align: center;
-    background: rgb(17, 17, 54);
-    color: white;
-    background-image: url(books.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 1500px 300px;
-    opacity: 0.8;
-  }
-  
-  .book-page-title h1{
-    position: relative;
-    top: 25%;
-    transform: trasnalteY(-25%);
-  }
-  
-  .book-grid {
-    grid-column: 1/5;
-    grid-row: 5/6;
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 3em auto;
-    grid-gap: 1.5em;
-    margin-top: 1em;
-    padding-bottom: 5em;
-    width: 90vw;
-    text-align: left;
-    font-size: 1.5em;
-    list-style-type: none;
-    opacity: 0.8;
-  }
-  
-  .button-div > button {
-    position: relative;
-    top: 5px;
-    background-color: black;
-    color: white;
-    margin: 10px 10px 0 0;
-    font-size: 15px;
-    height: 35px;
-    width: 140px;
-    border-radius: 4px;
-   
-  }
+.saveKeyText p{
+  position: relative; 
+  top: 20%;
+  transform: trasnalteY(-20%);
+  font-family: 'Bebas Neue', cursive;
+}
 
-  .ok-button {
-    position: relative;
-    top: 5px;
-    background-color: black;
-    color: white;
-    margin: 0 0 10px 0;
-    font-size: 15px;
-    height: 30px;
-    width: 60px;
-    border-radius: 4px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*LOG IN BOX*/
+.page-grid{
+  background-color: #9D8A76;
+  
+  opacity: 0.8;
+  grid-column: 1/2;
+  grid-row: 2/4;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-content: center;
+  text-align: center;
+}
+
+.login-input{
+  height: 40px;
+  width: 200px;
+  text-align: center;
+  font-size: 16px;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  border-radius: 2px;
+  border: none;
+}
+
+.login-button{
+  background-color: #FDB900; 
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  height: 40px;
+  width: 100px;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  border-radius: 2px;
+}
+
+/*ADD BOOKS CONTAINER*/
+.add-book-box{
+  background-color: #1F3B2C;
+  opacity: 0.8;
+  grid-column: 2/4;
+  grid-row: 2/4;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr ;
+
+}
+
+#title-input{
+  background-color: white;
+  height: 40px;
+  width: 250px;
+  text-align: center;
+  font-size: 16px;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  border-radius: 2px;
+  border: none;
+}
+
+#author-input{
+  background-color: white;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  height: 40px;
+  width: 250px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 2px;
+  border: none;
+}
+
+.add-book{
+  background-color: #FDB900;
+  border: none;
+  color: white;
+  padding: 5px 32px;
+  text-align: center;
+  font-size: 16px;
+  height: 40px;
+  width: 150px;  
+  grid-column: 1/3;
+  grid-row: 2/3;
+  border-radius: 2px;
+}
+
+
+/*ERROR LOG CONTAINER*/
+.statusMsg{
+  grid-column: 4/5;
+  grid-row: 2/3;
+  text-align: center;
+  color: white;
+  background-color: #9D8A76;
+  opacity: 0.8;
+  
+}
+
+.statusMsg p{
+  position: relative; 
+  font-size: 1.1em;
+  top: 25%;
+  transform: trasnalteY(-25%);
+}
+
+.error-log{
+  grid-column: 4/5;
+  grid-row: 3/4;
+  background: white;
+  padding: 20px 10px 10px 10px;
+  text-align: center;
+  font-size: 13px;
+  overflow: auto;
+  list-style-type: none;
+}
+
+
+.status-message .success {
+    color: darkgreen;
+}
+.status-message .fail {
+    color: red;
+}
+
+/*ADDED BOOKS*/
+.book-page-title{
+  grid-column: 1/5;
+  grid-row: 4/5;
+  text-align: center;
+  color: #1F3B2C;
+  background-color: #9D8A76;
+  opacity: 0.8;
+}
+
+.book-page-title p{
+  font-weight: bold;
+  font-size: 2em;
+  position: relative;
+  top: 25%;
+  transform: trasnalteY(-25%);
+}
+
+.book-grid {
+  grid-column: 1/5;
+  grid-row: 5/6;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 3em auto;
+  grid-gap: 1.5em;
+  margin-top: 1em;
+  padding-bottom: 5em;
+  width: 90vw;
+  text-align: left;
+  font-size: 1.5em;
+  list-style-type: none;
+  opacity: 0.8;
+}
+
+.button-div > button {
+  position: relative;
+  top: 5px;
+  background-color: #1F3B2C;
+  color: white;
+  margin: 10px 10px 0 0;
+  font-size: 15px;
+  height: 35px;
+  width: 140px;
+  border-radius: 2px;
+ 
+}
+
+.ok-button {
+  position: relative;
+  top: 5px;
+  background-color: #1F3B2C;
+  color: white;
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  height: 30px;
+  width: 60px;
+  border-radius: 2px;
 }
 
 .key-button:hover, .add-book:hover, .login-button:hover{
-    background-color: darkslategray;
-    transition-delay: 0.1s;
-    border: 2px solid black;
+  background-color: darkslategray;
+  transition-delay: 0.1s;
+  border: 2px solid black;
 }
 
 
@@ -301,223 +294,215 @@
 
 
 
-  
-  @media only screen and (max-width: 1100px) {
 
-  .page-banner{
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
-  
-  .title{
-    grid-column: 1/3;
-    grid-row: 1/2;
-    font-size: 2em;
-  }
-  
-  .key-button{
-    grid-column: 1/3;
-    grid-row: 2/3;
-  }
-  
-  .key-box{
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
-  
-  .saveKeyText{
+@media only screen and (max-width: 1100px) {
+
+.page-banner{
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.title{
+  grid-column: 1/3;
+  grid-row: 1/2;
+  font-size: 2em;
+}
+
+.key-button{
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+
+.key-box{
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.saveKeyText{
 grid-column: 1/3;
 grid-row: 3/4;
-  }
-  
-    /*LOG IN BOX*/
-    .page-grid{
-        grid-gap: 10px;
-    }
-    
-  .login-input{
-    width: 130px;
-  }
-  
-  .login-button{
-    width: 110px;
-    height: 30px;
-  }
-  
-  /*ADD BOOKS CONTAINER*/
-  .add-book-box{
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 10px;
-  }
-  
-  #title-input{
-    grid-column: 1/2;
-    grid-row: 1/2;
-    width: 250px;
-    margin-top: 30px;
-  }
-  
-  #author-input{
-    grid-column: 1/2;
-    grid-row: 2/3;
-    width: 250px;
-  }
-  
-  .add-book{
-    height: 30px;
-    width: 150px;  
-    grid-column: 1/2;
-    grid-row: 3/4;
-  }
-  
-  /*ERROR LOG CONTAINER*/
-  .statusMsg p{
-    font-size: 15px;
-    top: 30%;
-    transform: trasnalteY(-30%);
-  }
-  /*ADDED BOOKS*/
-  .book-grid {
-    grid-template-columns: 1fr 1fr;
-    font-size: 1.3em;
-  }
-   
-  }
+}
 
-  
-  @media only screen and (max-width: 600px) {
-  
-    main{
-      
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 250px 50px 100px 160px 70px 100px auto;
-    } 
-    
-    /*GET YOUR KEY BOX*/
-  .page-banner{
-    grid-column: 1/3;
-    grid-row: 1/2;
-  }
-  
-  .title{
-    font-size: 1.5em;  
-    /*margin-right: 90px;*/
-  }
-  
-  .key-button{
-    height: 40px;
-    width: 120px;
-    padding: 0 0 4px 0;
-    /*position: relative; 
-    right: 25px;*/
-  }
-
-  .key-box{
-    height: 40px;
-    width: 120px;
-    padding: 8px 0 0 0;
-    font-size: 20px;
-    /*margin-right: 50px;
-    position: relative; 
-    right: 25px;*/
-  }
-
-  .saveKeyText p{
-    
-    position: relative; 
-    font-size: 1em;
-    top: 25%;
-    transform: trasnalteY(-25%);
-  }
-  
   /*LOG IN BOX*/
   .page-grid{
-    grid-column: 1/2;
-    grid-row: 2/4;
+      grid-gap: 10px;
   }
   
-  .login-input{
-    height: 40px;
-    width: 125px;
-  }
-  
-  .login-button{
-    height: 30px;
-    width: 90px;
-    padding: 0 0 0 0;
-  }
-  
-  /*ADD BOOKS CONTAINER*/
-  .add-book-box{
-    grid-column: 1/3;
-    grid-row: 4/5;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+.login-input{
+  width: 130px;
+}
+
+.login-button{
+  width: 110px;
+  height: 30px;
+}
+
+/*ADD BOOKS CONTAINER*/
+.add-book-box{
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+#title-input{
+  grid-column: 1/2;
+  grid-row: 1/2;
+  width: 250px;
+  margin-top: 30px;
+}
+
+#author-input{
+  grid-column: 1/2;
+  grid-row: 2/3;
+  width: 250px;
+}
+
+.add-book{
+  height: 30px;
+  width: 150px;  
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+/*ERROR LOG CONTAINER*/
+.statusMsg p{
+  font-size: 15px;
+  top: 30%;
+  transform: trasnalteY(-30%);
+}
+/*ADDED BOOKS*/
+.book-grid {
+  grid-template-columns: 1fr 1fr;
+  font-size: 1.3em;
+}
+ 
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  main{
     
-  }
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 250px 50px 100px 160px 70px 100px auto;
+  } 
   
-  #title-input{
-    height: 30px;
-    width: 200px;
-    grid-column: 1/2;
-    grid-row: 1/2;
+  /*GET YOUR KEY BOX*/
+.page-banner{
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
 
-  }
-  
-  #author-input{
-    height: 30px;
-    width: 200px;
-    grid-column: 1/2;
-    grid-row: 2/3;
+.title{
+  font-size: 1.5em;  
+}
 
-  }
-  
-  .add-book{
-    height: 30px;
-    width: 150px; 
-    grid-column: 1/2;
-    grid-row: 3/4;
-    margin-bottom: 50px;
-  }
-  
-  
-  /*ERROR LOG CONTAINER*/
-  .statusMsg{
-    grid-column: 2/3;
-    grid-row: 2/3;
-  }
+.key-button{
+  height: 40px;
+  width: 100px;
+}
 
-  .statusMsg p{
-    font-size: 15px;
-  }
+.key-box{
+  height: 40px;
+  width: 100px;
+  padding: 8px 0 0 0;
+  font-size: 20px;
+}
+
+.saveKeyText p{
   
-  .error-log{
-    grid-column: 2/3;
-    grid-row: 3/4;
-    
-  }
+  position: relative; 
+  font-size: 1em;
+  top: 25%;
+  transform: trasnalteY(-25%);
+}
+
+/*LOG IN BOX*/
+.page-grid{
+  grid-column: 1/2;
+  grid-row: 2/4;
+}
+
+.login-input{
+  height: 40px;
+  width: 125px;
+}
+
+.login-button{
+  height: 30px;
+  width: 90px;
+  padding: 0 0 0 0;
+}
+
+/*ADD BOOKS CONTAINER*/
+.add-book-box{
+  grid-column: 1/3;
+  grid-row: 4/5;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   
+}
+
+#title-input{
+  height: 30px;
+  width: 200px;
+  grid-column: 1/2;
+  grid-row: 1/2;
+
+}
+
+#author-input{
+  height: 30px;
+  width: 200px;
+  grid-column: 1/2;
+  grid-row: 2/3;
+
+}
+
+.add-book{
+  height: 30px;
+  width: 150px; 
+  grid-column: 1/2;
+  grid-row: 3/4;
+  margin-bottom: 50px;
+}
+
+
+/*ERROR LOG CONTAINER*/
+.statusMsg{
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.statusMsg p{
+  font-size: 15px;
+}
+
+.error-log{
+  grid-column: 2/3;
+  grid-row: 3/4;
   
-  
-  /*ADDED BOOKS*/
-  .book-page-title{
-    grid-column: 1/3;
-    grid-row: 5/6;
-  }
-  
-  .book-page-title h1{
-    font-size: 25px;
-  }
-  
-  .book-grid {
-    grid-column: 1/3;
-    grid-row: 6/7;
-    grid-template-columns: 1fr;
-    /*grid-template-rows: 100px;*/
-    margin-top: 1em;
-    font-size: 1.2em;
-    padding: 0 0 0 0;
-  }
-  
-  }
+}
+
+
+
+/*ADDED BOOKS*/
+.book-page-title{
+  grid-column: 1/3;
+  grid-row: 5/6;
+}
+
+.book-page-title h1{
+  font-size: 25px;
+}
+
+.book-grid {
+  grid-column: 1/3;
+  grid-row: 6/7;
+  grid-template-columns: 1fr;
+  margin-top: 1em;
+  font-size: 1.2em;
+  padding: 0 0 0 0;
+}
+
+}
