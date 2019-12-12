@@ -229,6 +229,7 @@ grid-column: 3/5;
   font-weight: bold;
   font-size: 2em;
   position: relative;
+  margin-top: 7px;
   top: 25%;
   transform: translateY(-25%);
 }
@@ -496,7 +497,7 @@ grid-row: 3/4;
   grid-row: 5/6;
 }
 
-.book-page-title h1{
+.book-page-title p{
   font-size: 25px;
 }
 
